@@ -13,8 +13,8 @@ entries:
     name: cron-job
     type: application
     urls:
-    - https://chart.onechart.dev/cron-job-0.47.0.tgz
-    version: 0.47.0
+    - https://chart.onechart.dev/cron-job-0.46.0.tgz
+    version: 0.46.0
   - apiVersion: v2
     created: "2023-07-14T13:32:44.4408474+02:00"
     dependencies:
@@ -347,8 +347,8 @@ entries:
     name: onechart
     type: application
     urls:
-    - https://chart.onechart.dev/onechart-0.47.0.tgz
-    version: 0.47.0
+    - https://chart.onechart.dev/onechart-0.46.0.tgz
+    version: 0.46.0
   - apiVersion: v2
     created: "2023-07-14T13:32:44.7941656+02:00"
     dependencies:
