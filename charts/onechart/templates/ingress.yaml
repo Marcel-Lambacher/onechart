@@ -29,6 +29,9 @@ spec:
   {{- if .ingress.ingressClassName }}
   ingressClassName: {{ .ingress.ingressClassName }}
   {{- end }}
+  {{- if .ingress.ingressClassName2 }}
+  ingressClassName: {{ .ingress.ingressClassName }}
+  {{- end }}
   {{- if default false .ingress.tlsEnabled }}
   tls:
     - hosts:
