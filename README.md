@@ -117,7 +117,7 @@ Global Flags:
 ## Configuration
 
 `cr` is a command-line application.
-All command-line flags can also be set via environment variables or config file.
+All cmmand-line flags can also be set via environment variables or config file.
 Environment variables must be prefixed with `CR_`.
 Underscores must be used instead of hyphens.
 
