@@ -5,6 +5,12 @@ volumes:
   - name: {{ .name }}
     {{- if .emptyDir }}
     emptyDir: {}
+    {{- else if .existingConfigMap }}
+    configMap:
+      name: {{ .existingConfigMap }}
+    {{- else if .fileName }}
+    configMap:
+      name: {{ template "common.robustName" .fileName }}
     {{- else if .hostPath }}
     hostPath:
       path: {{ .hostPath.path }}
@@ -18,8 +24,8 @@ volumes:
       {{ else }}
       claimName: {{ printf "%s-%s" $.Release.Name .name }}
       {{- end }}
-    {{- end }}
-  {{- end }}
+      {{- end }}
+{{- end }}     
   {{- range .Values.sealedFileSecrets }}
   - name: {{ .name }}
     secret:
